@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/sanskar-portfolio/static/css/main.997f528b.css",
+    "main.js": "/sanskar-portfolio/static/js/main.10370b36.js",
+    "static/js/488.79e44e72.chunk.js": "/sanskar-portfolio/static/js/488.79e44e72.chunk.js",
+    "service-worker.js": "/sanskar-portfolio/service-worker.js",
+    "index.html": "/sanskar-portfolio/index.html",
+    "main.997f528b.css.map": "/sanskar-portfolio/static/css/main.997f528b.css.map",
+    "main.10370b36.js.map": "/sanskar-portfolio/static/js/main.10370b36.js.map",
+    "488.79e44e72.chunk.js.map": "/sanskar-portfolio/static/js/488.79e44e72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.997f528b.css",
+    "static/js/main.10370b36.js"
+  ]
+}
