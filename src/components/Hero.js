@@ -92,8 +92,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="btn-outline"
                 onClick={() => {
-                  // You can add a resume download link here
-                  window.open('/resume.pdf', '_blank');
+                  window.open('https://www.overleaf.com/read/dqdkwhhdvzrd#5d31a2', '_blank', 'noopener,noreferrer');
                 }}
               >
                 Download Resume
