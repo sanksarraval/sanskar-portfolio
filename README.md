@@ -173,7 +173,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 - **GitHub**: [@sanksarraval](https://github.com/sanksarraval)
 - **LinkedIn**: [Sanskar Raval](https://linkedin.com/in/sanskar-raval)
-- **Email**: sanskar.raval@example.com
+- **Email**: sanskarcanada123@gmail.com
 
 ## 🙏 Acknowledgments
 
