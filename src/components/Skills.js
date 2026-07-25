@@ -5,15 +5,30 @@ const Skills = () => {
   const skillCategories = [
     {
       category: 'Languages',
-      skills: ['C#', 'Java', 'JavaScript', 'Dart', 'SQL', 'Python'],
+      skills: ['C#', 'Python', 'SQL', 'Java', 'JavaScript', 'Dart'],
     },
     {
       category: 'Frameworks',
-      skills: ['.NET Core', 'React', 'Vue.js', 'Flutter', 'React Native'],
+      skills: ['.NET 8/10', '.NET Core', 'EF Core', 'React', 'Vue.js', 'Flutter', 'React Native'],
+    },
+    {
+      category: 'Azure',
+      skills: [
+        'Azure Functions',
+        'Logic Apps',
+        'Service Bus',
+        'Azure Data Warehouse',
+        'Azure DevOps',
+        'Dynamics 365',
+      ],
+    },
+    {
+      category: 'Data',
+      skills: ['DB2 / AS400', 'MSSQL', 'SQLite', 'Apache Airflow', 'SSRS'],
     },
     {
       category: 'Tools',
-      skills: ['Git', 'GitHub', 'MSSQL', 'SQLite', 'VS Code', 'Apache Airflow'],
+      skills: ['Git', 'GitHub', 'Visual Studio', 'VS Code'],
     },
   ];
 

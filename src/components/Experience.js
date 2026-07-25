@@ -5,6 +5,33 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      title: 'Software Developer',
+      company: 'Manitoba Agricultural Services Corporation',
+      period: 'Sep 2025 – Present',
+      location: 'Headingley, MB · Hybrid',
+      current: true,
+      description:
+        'Building the Underwriting Modernization Project, replacing a legacy AS/400 calculation system with a modern .NET and Azure solution — data pipelines, calculation logic, and the business rules that automate underwriting.',
+      highlights: [
+        'Developing a .NET 8/10 calculation engine set to fully replace the AS/400 system.',
+        'Integrating multiple data sources through EF Core: DB2 on AS/400, Azure Data Warehouse, and Dynamics 365.',
+        'Building event-driven workflows with Azure Functions, Logic Apps, and Service Bus across the Azure stack.',
+        'Implementing crop-specific business rules to calculate net yields accurately at scale.',
+        'Working directly with product owners and stakeholders to translate policy into requirements.',
+      ],
+      skills: [
+        '.NET 8/10',
+        'C#',
+        'EF Core',
+        'Azure Functions',
+        'Logic Apps',
+        'Service Bus',
+        'DB2 / AS400',
+        'Dynamics 365',
+      ],
+    },
+    {
+      id: 2,
       title: 'Full Stack Developer (Co-op)',
       company: 'Johnston Group',
       period: 'Jan 2025 – Apr 2025',
@@ -14,7 +41,7 @@ const Experience = () => {
       skills: ['Python', 'Apache Airflow', 'Data Engineering', 'Automation'],
     },
     {
-      id: 2,
+      id: 3,
       title: 'Application Developer (Co-op)',
       company: 'Province of Manitoba',
       period: 'Jan 2024 – Dec 2024',
@@ -24,7 +51,7 @@ const Experience = () => {
       skills: ['SSRS', 'Dashboards', 'C#', '.NET'],
     },
     {
-      id: 3,
+      id: 4,
       title: 'Web Developer (Co-op)',
       company: 'Province of Manitoba',
       period: 'Sep 2023 – Dec 2023',
@@ -34,7 +61,7 @@ const Experience = () => {
       skills: ['.NET', 'Web Development', 'Accessibility'],
     },
     {
-      id: 4,
+      id: 5,
       title: 'Research Assistant',
       company: 'University of Manitoba',
       period: 'May 2022 – Sep 2022',
@@ -44,7 +71,7 @@ const Experience = () => {
       skills: ['Data Analysis', 'Algorithm Optimization', 'Research'],
     },
     {
-      id: 5,
+      id: 6,
       title: 'Customer Service Representative',
       company: 'Walmart',
       period: '2020 – 2024',
@@ -80,7 +107,9 @@ const Experience = () => {
               className="grid md:grid-cols-[11rem_1fr] gap-4 md:gap-8 py-8"
             >
               <div className="font-mono text-xs text-ink-faint pt-1">
-                <p>{experience.period}</p>
+                <p className={experience.current ? 'text-accent' : undefined}>
+                  {experience.period}
+                </p>
                 <p className="mt-1 text-ink-muted">{experience.location}</p>
               </div>
 
@@ -92,6 +121,18 @@ const Experience = () => {
                 <p className="text-ink-muted mt-3 leading-relaxed max-w-2xl">
                   {experience.description}
                 </p>
+                {experience.highlights && (
+                  <ul className="mt-4 space-y-2 max-w-2xl">
+                    {experience.highlights.map((highlight) => (
+                      <li key={highlight} className="flex gap-3 text-sm text-ink-muted leading-relaxed">
+                        <span className="text-accent select-none" aria-hidden="true">
+                          —
+                        </span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {experience.skills.map((skill) => (
                     <span key={skill} className="tag">
