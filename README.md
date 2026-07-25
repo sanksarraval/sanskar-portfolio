@@ -1,187 +1,83 @@
-# Sanskar Raval - Portfolio Website
+# Sanskar Raval — Portfolio
 
-A modern, responsive portfolio website built with React and Tailwind CSS, featuring dark/light mode theming and smooth animations.
+Personal portfolio at [sanksarraval.github.io/sanskar-portfolio](https://sanksarraval.github.io/sanskar-portfolio). A single-page React site with a dark technical design: near-black canvas, mint/teal accent, Space Grotesk headings, and JetBrains Mono labels.
 
-## 🌟 Features
+## Tech stack
 
-- **Responsive Design**: Fully responsive layout for mobile, tablet, and desktop
-- **Dark/Light Mode**: Toggle between beautiful light and dark themes
-- **Smooth Animations**: Powered by Framer Motion for engaging user experience
-- **Modern UI**: Clean, professional design with gradient accents
-- **SEO Optimized**: Built with React and optimized for search engines
-- **Fast Performance**: Optimized for speed and accessibility
+- **React 19** with Create React App
+- **Tailwind CSS 3** — design tokens defined in `tailwind.config.js`
+- **Framer Motion** — restrained fade/rise animations on scroll
+- **GitHub Pages** — deployed via `gh-pages`
 
-## 🎨 Design Features
+## Sections
 
-### Light Mode
-- Soft pastel color palette (blush pinks, soft blues, lavender, mint)
-- Clean white backgrounds with subtle gradients
-- Professional and approachable feel
+1. **Hero** — name, pitch, photo, and CTAs (experience / resume)
+2. **Experience** — work history as a left-aligned list with a mono date column
+3. **Projects** — bordered panels with tech tags and GitHub links
+4. **Skills** — tag rows grouped by Languages / Frameworks / Azure / Data / Tools
+5. **Publications** — citation-style list of IEEE papers with DOI links
+6. **Contact** — direct email and social links
 
-### Dark Mode
-- Cool modern aesthetic with deep grays and dark blue/purple tones
-- Neon cyan and soft red accent colors
-- Easy on the eyes for extended viewing
+## Getting started
 
-## 🛠️ Technologies Used
-
-- **React 19** - Modern React with latest features
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **GitHub Pages** - Hosting platform
-- **Node.js** - JavaScript runtime
-
-## 📱 Sections
-
-1. **Hero Section** - Introduction with call-to-action buttons
-2. **About** - Personal background and education
-3. **Projects** - Featured projects with GitHub links
-4. **Experience** - Work history and timeline
-5. **Skills** - Technical skills with proficiency levels
-6. **Contact** - Contact form and social links
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v16 or higher)
-- npm or yarn package manager
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/sanksarraval/sanskar-portfolio.git
-   cd sanskar-portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm start
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:3000` to view the website
-
-### Building for Production
+Requires Node.js v16 or higher.
 
 ```bash
-npm run build
+git clone https://github.com/sanksarraval/sanskar-portfolio.git
+cd sanskar-portfolio
+npm install
+npm start
 ```
 
-This creates an optimized production build in the `build` folder.
+The dev server runs at `http://localhost:3000/sanskar-portfolio`.
 
-## 🌐 Deployment
+## Scripts
 
-### GitHub Pages Deployment
+- `npm start` — development server with hot reload
+- `npm run build` — optimized production build in `build/`
+- `npm run deploy` — build and publish to GitHub Pages
+- `npm test` — test runner
 
-1. **Push your code to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial portfolio setup"
-   git push origin main
-   ```
+## Deployment
 
-2. **Deploy to GitHub Pages**
-   ```bash
-   npm run deploy
-   ```
+```bash
+npm run deploy
+```
 
-3. **Configure GitHub Pages**
-   - Go to your repository settings
-   - Navigate to "Pages" section
-   - Select "gh-pages" branch as source
-   - Your site will be available at `https://sanksarraval.github.io/sanskar-portfolio`
+This builds the site and pushes it to the `gh-pages` branch. The site is served at `https://sanksarraval.github.io/sanskar-portfolio` (the `homepage` field in `package.json` controls the base path).
 
-### Manual Deployment
-
-1. Build the project: `npm run build`
-2. Upload the contents of the `build` folder to your web server
-
-## 📁 Project Structure
+## Project structure
 
 ```
 sanskar-portfolio/
 ├── public/
-│   ├── index.html
-│   ├── manifest.json
-│   └── favicon.ico
+│   ├── index.html          # dark theme-color + background (no white flash)
+│   └── images/             # profile photo
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.js
-│   │   ├── Hero.js
-│   │   ├── About.js
-│   │   ├── Projects.js
-│   │   ├── Experience.js
-│   │   ├── Skills.js
-│   │   ├── Contact.js
-│   │   └── Footer.js
-│   ├── App.js
-│   ├── index.js
-│   └── index.css
-├── tailwind.config.js
-├── postcss.config.js
-├── package.json
-└── README.md
+│   │   ├── Navbar.js       # fixed translucent nav, mono links
+│   │   ├── Hero.js         # name, pitch, photo, CTAs
+│   │   ├── Experience.js   # work history (content lives here)
+│   │   ├── Projects.js     # project panels (content lives here)
+│   │   ├── Skills.js       # skill tag rows (content lives here)
+│   │   ├── Publications.js # IEEE papers (content lives here)
+│   │   ├── Contact.js      # email + social links
+│   │   └── Footer.js       # slim footer row
+│   ├── App.js              # section order
+│   ├── index.css           # fonts, component classes (panel, tag, btn-*)
+│   └── index.js
+├── tailwind.config.js      # canvas/ink/accent color tokens, fonts
+└── package.json
 ```
 
-## 🎯 Customization
+## Customization
 
-### Personal Information
-Update the following files with your information:
-- `src/components/Hero.js` - Name, tagline, and description
-- `src/components/About.js` - Personal background
-- `src/components/Projects.js` - Your projects
-- `src/components/Experience.js` - Work experience
-- `src/components/Skills.js` - Technical skills
-- `src/components/Contact.js` - Contact information and social links
+- **Content** — all text lives in hardcoded arrays inside each component under `src/components/`.
+- **Colors** — the palette is three token groups in `tailwind.config.js`: `canvas` (backgrounds and borders), `ink` (text), and `accent` (teal).
+- **Type** — fonts are imported at the top of `src/index.css`; shared classes (`section-label`, `panel`, `tag`, `btn-primary`, etc.) are defined there too.
 
-### Styling
-- Modify `tailwind.config.js` for color schemes and custom styles
-- Update `src/index.css` for additional custom styles
-- Adjust component-specific styles in each component file
-
-### Colors and Themes
-The color palette is defined in `tailwind.config.js`:
-- **Primary**: Pink gradient for main accents
-- **Secondary**: Blue gradient for secondary elements
-- **Dark**: Gray scale for dark mode
-- **Neon**: Bright colors for dark mode accents
-
-## 🔧 Available Scripts
-
-- `npm start` - Runs the app in development mode
-- `npm run build` - Builds the app for production
-- `npm test` - Launches the test runner
-- `npm run eject` - Ejects from Create React App (irreversible)
-- `npm run deploy` - Deploys to GitHub Pages
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📞 Contact
+## Contact
 
 - **GitHub**: [@sanksarraval](https://github.com/sanksarraval)
 - **LinkedIn**: [Sanskar Raval](https://linkedin.com/in/sanskar-raval)
 - **Email**: sanskarcanada123@gmail.com
-
-## 🙏 Acknowledgments
-
-- [Create React App](https://create-react-app.dev/) for the project setup
-- [Tailwind CSS](https://tailwindcss.com/) for the styling framework
-- [Framer Motion](https://www.framer.com/motion/) for animations
-- [GitHub Pages](https://pages.github.com/) for hosting
-
----
-
-**Built with ❤️ by Sanskar Raval** 
