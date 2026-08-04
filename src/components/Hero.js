@@ -71,9 +71,9 @@ const Hero = () => {
             {...fadeUp(0.28)}
             className="text-base md:text-lg text-ink-muted leading-relaxed max-w-lg"
           >
-            I build accessible, scalable software — from .NET web apps and data pipelines
-            to mobile and research tooling. Looking for full-stack roles where clean
-            engineering meets real user impact.
+            Full-stack developer working across .NET, Azure, and data pipelines —
+            shipping web apps, automating workflows, and building systems that
+            hold up in production.
           </motion.p>
 
           <motion.div {...fadeUp(0.38)} className="flex flex-col sm:flex-row gap-3 pt-2">
