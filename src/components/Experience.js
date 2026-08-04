@@ -86,10 +86,10 @@ const Experience = () => {
     <section id="experience" className="section-padding border-t border-canvas-border">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.45 }}
           className="mb-12"
         >
           <p className="section-label mb-3">01 — Experience</p>
@@ -100,24 +100,24 @@ const Experience = () => {
           {experiences.map((experience, index) => (
             <motion.article
               key={experience.id}
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.35, delay: index * 0.05 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.4, delay: index * 0.06 }}
               className="grid md:grid-cols-[11rem_1fr] gap-4 md:gap-8 py-8"
             >
               <div className="font-mono text-xs text-ink-faint pt-1">
-                <p className={experience.current ? 'text-accent' : undefined}>
+                <p className={experience.current ? 'text-accent font-medium' : undefined}>
                   {experience.period}
                 </p>
                 <p className="mt-1 text-ink-muted">{experience.location}</p>
               </div>
 
               <div>
-                <h3 className="font-display text-lg font-medium text-ink">
+                <h3 className="font-display text-lg md:text-xl font-medium text-ink">
                   {experience.title}
                 </h3>
-                <p className="font-mono text-sm text-accent mt-1">{experience.company}</p>
+                <p className="font-mono text-sm text-spruce mt-1">{experience.company}</p>
                 <p className="text-ink-muted mt-3 leading-relaxed max-w-2xl">
                   {experience.description}
                 </p>

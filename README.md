@@ -1,19 +1,19 @@
 # Sanskar Raval — Portfolio
 
-Personal portfolio at [sanksarraval.github.io/sanskar-portfolio](https://sanksarraval.github.io/sanskar-portfolio). A single-page React site with a dark technical design: near-black canvas, mint/teal accent, Space Grotesk headings, and JetBrains Mono labels.
+Personal portfolio at [sanksarraval.github.io/sanskar-portfolio](https://sanksarraval.github.io/sanskar-portfolio). A single-page React site with a light **Prairie Spec** design: cool paper canvas, persimmon accent, spruce labels, Fraunces display type, and IBM Plex Sans/Mono.
 
 ## Tech stack
 
 - **React 19** with Create React App
 - **Tailwind CSS 3** — design tokens defined in `tailwind.config.js`
-- **Framer Motion** — restrained fade/rise animations on scroll
+- **Framer Motion** — staggered hero load and scroll reveals
 - **GitHub Pages** — deployed via `gh-pages`
 
 ## Sections
 
-1. **Hero** — name, pitch, photo, and CTAs (experience / resume)
+1. **Hero** — name, pitch, full-bleed photo, and CTAs (experience / resume)
 2. **Experience** — work history as a left-aligned list with a mono date column
-3. **Projects** — bordered panels with tech tags and GitHub links
+3. **Projects** — interactive project panels with tech tags and GitHub links
 4. **Skills** — tag rows grouped by Languages / Frameworks / Azure / Data / Tools
 5. **Publications** — citation-style list of IEEE papers with DOI links
 6. **Contact** — direct email and social links
@@ -51,30 +51,30 @@ This builds the site and pushes it to the `gh-pages` branch. The site is served 
 ```
 sanskar-portfolio/
 ├── public/
-│   ├── index.html          # dark theme-color + background (no white flash)
+│   ├── index.html          # light theme-color + background (no flash)
 │   └── images/             # profile photo
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.js       # fixed translucent nav, mono links
-│   │   ├── Hero.js         # name, pitch, photo, CTAs
+│   │   ├── Hero.js         # name, pitch, full-bleed photo, CTAs
 │   │   ├── Experience.js   # work history (content lives here)
 │   │   ├── Projects.js     # project panels (content lives here)
-│   │   ├── Skills.js       # skill tag rows (content lives here)
+│   │   ├── Skills.js       # skill rows (content lives here)
 │   │   ├── Publications.js # IEEE papers (content lives here)
 │   │   ├── Contact.js      # email + social links
 │   │   └── Footer.js       # slim footer row
-│   ├── App.js              # section order
-│   ├── index.css           # fonts, component classes (panel, tag, btn-*)
+│   ├── App.js              # section order + atmosphere wrapper
+│   ├── index.css           # fonts, grain/grid atmosphere, component classes
 │   └── index.js
-├── tailwind.config.js      # canvas/ink/accent color tokens, fonts
+├── tailwind.config.js      # canvas/ink/accent/spruce tokens, fonts
 └── package.json
 ```
 
 ## Customization
 
 - **Content** — all text lives in hardcoded arrays inside each component under `src/components/`.
-- **Colors** — the palette is three token groups in `tailwind.config.js`: `canvas` (backgrounds and borders), `ink` (text), and `accent` (teal).
-- **Type** — fonts are imported at the top of `src/index.css`; shared classes (`section-label`, `panel`, `tag`, `btn-primary`, etc.) are defined there too.
+- **Colors** — palette tokens in `tailwind.config.js`: `canvas` (paper), `ink` (text), `accent` (persimmon), `spruce` (labels).
+- **Type** — Fraunces + IBM Plex imported at the top of `src/index.css`; shared classes (`section-label`, `panel`, `tag`, `btn-*`, `atmosphere`) are defined there too.
 
 ## Contact
 

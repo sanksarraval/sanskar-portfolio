@@ -25,10 +25,10 @@ const Publications = () => {
     <section id="publications" className="section-padding border-t border-canvas-border">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.45 }}
           className="mb-10"
         >
           <p className="section-label mb-3">04 — Publications</p>
@@ -39,10 +39,10 @@ const Publications = () => {
           {publications.map((pub, index) => (
             <motion.article
               key={pub.id}
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.35, delay: index * 0.05 }}
+              transition={{ duration: 0.4, delay: index * 0.06 }}
               className="py-6"
             >
               <h3 className="font-display text-base md:text-lg font-medium text-ink leading-snug max-w-3xl">

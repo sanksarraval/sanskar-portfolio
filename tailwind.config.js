@@ -7,38 +7,35 @@ module.exports = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: '#0A0F0F',
-          raised: '#111716',
-          border: '#1F2A28',
+          DEFAULT: '#E9EBE8',
+          raised: '#F7F8F6',
+          border: '#C8CDC8',
         },
         ink: {
-          DEFAULT: '#E7ECEB',
-          muted: '#8A9A96',
-          faint: '#5A6B67',
+          DEFAULT: '#141816',
+          muted: '#5C6660',
+          faint: '#8A938C',
         },
         accent: {
-          DEFAULT: '#2DD4BF',
-          soft: '#5EEAD4',
-          dim: '#14B8A6',
+          DEFAULT: '#E4572E',
+          soft: '#F07A56',
+          dim: '#C44520',
+        },
+        spruce: {
+          DEFAULT: '#1B4332',
+          soft: '#2D6A4F',
         },
       },
       fontFamily: {
-        sans: [
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'sans-serif',
-        ],
-        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       maxWidth: {
-        content: '64rem',
+        content: '68rem',
       },
       borderRadius: {
-        panel: '4px',
+        panel: '2px',
       },
     },
   },

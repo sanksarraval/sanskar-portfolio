@@ -19,10 +19,10 @@ const Contact = () => {
     <section id="contact" className="section-padding border-t border-canvas-border">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.45 }}
           className="max-w-2xl"
         >
           <p className="section-label mb-3">05 — Contact</p>
@@ -33,12 +33,12 @@ const Contact = () => {
 
           <a
             href="mailto:sanskarcanada123@gmail.com"
-            className="font-display text-xl sm:text-2xl md:text-3xl text-accent hover:text-accent-soft transition-colors break-all"
+            className="font-display text-xl sm:text-2xl md:text-3xl text-accent hover:text-accent-dim transition-colors break-all"
           >
             sanskarcanada123@gmail.com
           </a>
 
-          <div className="mt-10 space-y-4">
+          <div className="mt-10 space-y-0">
             {links.map((link) => (
               <a
                 key={link.label}

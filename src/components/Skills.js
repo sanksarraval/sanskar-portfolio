@@ -36,10 +36,10 @@ const Skills = () => {
     <section id="skills" className="section-padding border-t border-canvas-border">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.45 }}
           className="mb-12"
         >
           <p className="section-label mb-3">03 — Skills</p>
@@ -50,18 +50,18 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.category}
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.35, delay: index * 0.05 }}
-              className="grid md:grid-cols-[10rem_1fr] gap-3 md:gap-8 items-start"
+              transition={{ duration: 0.4, delay: index * 0.06 }}
+              className="grid md:grid-cols-[10rem_1fr] gap-3 md:gap-8 items-start border-b border-canvas-border pb-8 last:border-0 last:pb-0"
             >
-              <p className="font-mono text-xs uppercase tracking-wider text-ink-faint pt-1">
+              <p className="font-mono text-xs uppercase tracking-wider text-spruce pt-1">
                 {category.category}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-x-4 gap-y-2">
                 {category.skills.map((skill) => (
-                  <span key={skill} className="tag">
+                  <span key={skill} className="font-mono text-sm text-ink-muted">
                     {skill}
                   </span>
                 ))}

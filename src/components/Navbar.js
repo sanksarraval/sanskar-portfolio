@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         isScrolled
-          ? 'bg-canvas/80 backdrop-blur-md border-b border-canvas-border'
+          ? 'bg-canvas/85 backdrop-blur-md border-b border-canvas-border'
           : 'bg-transparent'
       }`}
     >
@@ -42,7 +42,7 @@ const Navbar = () => {
           <button
             type="button"
             onClick={() => scrollToSection('#home')}
-            className="font-mono text-sm tracking-widest text-accent hover:text-accent-soft transition-colors"
+            className="font-display text-lg font-semibold tracking-tight text-spruce hover:text-accent transition-colors"
           >
             SR
           </button>
@@ -82,7 +82,7 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden border-t border-canvas-border"
+              className="md:hidden overflow-hidden border-t border-canvas-border bg-canvas/95"
             >
               <div className="py-4 space-y-1">
                 {navItems.map((item) => (
