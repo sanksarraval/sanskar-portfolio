@@ -13,9 +13,9 @@ const Experience = () => {
       description:
         'Building the Underwriting Modernization Project, replacing a legacy AS/400 calculation system with a modern .NET and Azure solution — data pipelines, calculation logic, and the business rules that automate underwriting.',
       highlights: [
-        'Developing a .NET 8/10 calculation engine set to fully replace the AS/400 system.',
-        'Integrating multiple data sources through EF Core: DB2 on AS/400, Azure Data Warehouse, and Dynamics 365.',
-        'Building event-driven workflows with Azure Functions, Logic Apps, and Service Bus across the Azure stack.',
+        'Developing a .NET 10 calculation engine set to fully replace the AS/400 system.',
+        'Integrating multiple data sources through EF Core: DB2, AS/400, Azure Data Warehouse, and Dynamics 365.',
+        'Building event-driven workflows with Azure Functions, Logic Apps across the Azure stack.',
         'Implementing crop-specific business rules to calculate net yields accurately at scale.',
         'Working directly with product owners and stakeholders to translate policy into requirements.',
       ],
@@ -38,7 +38,7 @@ const Experience = () => {
       location: 'Winnipeg, MB',
       description:
         'Owned data pipeline development using Python and Apache Airflow, creating robust data workflows that reduced manual processing time by 60% and improved operational efficiency.',
-      skills: ['Python', 'Apache Airflow', 'Data Engineering', 'Automation'],
+      skills: ['Python', 'Apache Airflow', 'Full Stack Development', 'Automation'],
     },
     {
       id: 3,

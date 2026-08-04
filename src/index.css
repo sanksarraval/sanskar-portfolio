@@ -87,6 +87,11 @@
   .link-accent {
     @apply text-accent hover:text-accent-dim transition-colors duration-200;
   }
+
+  .hero-text {
+    @apply box-decoration-clone px-[0.28em] py-[0.12em] text-black;
+    background-color: rgba(228, 87, 46, 0.38);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

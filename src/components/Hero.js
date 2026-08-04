@@ -50,30 +50,32 @@ const Hero = () => {
         />
       </motion.div>
 
-      <div className="relative container-custom w-full pt-28 pb-16 md:py-28 z-10">
-        <div className="max-w-xl lg:max-w-2xl space-y-6">
-          <motion.p {...fadeUp(0)} className="font-mono text-xs uppercase tracking-[0.18em] text-spruce">
-            Open to full-stack roles · Winnipeg, CA
+      <div className="relative w-full pt-28 pb-16 md:py-28 z-10 pl-5 sm:pl-8 md:pl-12 lg:pl-16 pr-5 sm:pr-8">
+        <div className="max-w-xl lg:max-w-2xl space-y-6 text-left">
+          <motion.p {...fadeUp(0)} className="font-mono text-xs uppercase tracking-[0.18em] text-ink">
+            <span className="hero-text">Open to full-stack roles · Winnipeg, CA</span>
           </motion.p>
 
           <motion.h1
             {...fadeUp(0.1)}
             className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-semibold tracking-tight text-ink leading-[0.95]"
           >
-            Sanskar Raval
+            <span className="hero-text">Sanskar Raval</span>
           </motion.h1>
 
-          <motion.p {...fadeUp(0.2)} className="font-mono text-sm text-ink-muted">
-            Full-Stack Developer · UManitoba CS &apos;25 · 2+ years experience
+          <motion.p {...fadeUp(0.2)} className="font-mono text-sm text-ink">
+            <span className="hero-text">Full-Stack Developer · UManitoba CS &apos;25 · 2+ years experience</span>
           </motion.p>
 
           <motion.p
             {...fadeUp(0.28)}
-            className="text-base md:text-lg text-ink-muted leading-relaxed max-w-lg"
+            className="text-base md:text-lg text-ink leading-relaxed max-w-lg"
           >
-            Full-stack developer working across .NET, Azure, and data pipelines —
-            shipping web apps, automating workflows, and building systems that
-            hold up in production.
+            <span className="hero-text">
+              Full-stack developer working across .NET, Azure, and data pipelines —
+              shipping web apps, automating workflows, and building systems that
+              hold up in production.
+            </span>
           </motion.p>
 
           <motion.div {...fadeUp(0.38)} className="flex flex-col sm:flex-row gap-3 pt-2">
